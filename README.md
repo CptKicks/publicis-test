@@ -2,6 +2,17 @@
 
 ## https://admiring-lamport-20685e.netlify.app
 
+#Brief
+1. Create layout with a side navigation
+2. Add an active class on the home icon to indicate what page the user is on
+3. Create a chart with checkboxes where the user can select which audiences they wants to see the overlap for
+4. Show the selected audiences above the chart	
+5. Show a container with more info on the selected audiences next to the checkboxes
+6. Enable the chart to be downloaded
+7. Navigate to the Admin page and demonstrate that the Admin icon is highlighted in the menu
+
+Link to design: https://xd.adobe.com/view/6a2ae87e-9f0f-4635-a8f3-2a3427bd7e16-3f79/
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.3.
 
 ## Development server
