@@ -2,7 +2,7 @@
 
 ## https://admiring-lamport-20685e.netlify.app
 
-#Brief
+# Brief
 1. Create layout with a side navigation
 2. Add an active class on the home icon to indicate what page the user is on
 3. Create a chart with checkboxes where the user can select which audiences they wants to see the overlap for
