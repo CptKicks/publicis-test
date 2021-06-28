@@ -1,0 +1,51 @@
+{
+  "audiences": [ "Young families", "Middle aged", "Retired couples", "Adventurers", "University graduates" ],
+  "audienceData": {
+    "Young families": {
+      "value": 1938000,
+      "color": "#FA4B49"
+    },
+    "Middle aged": {
+      "value": 1432000,
+      "color": "#279EB7"
+    },
+    "Retired couples": {
+      "value": 1106000,
+      "color": "#FBD665"
+    },
+    "Adventurers": {
+      "value": 804120,
+      "color": "#DDF8E8"
+    },
+    "University graduates": {
+      "value": 720310,
+      "color": "#4DA437"
+    }
+  },
+  "overlapLinks": [
+    { "source": "Young families", "target": "Middle aged 2", "value": 331654 },
+    { "source": "Young families", "target": "Retired couples 2", "value": 198120 },
+    { "source": "Young families", "target": "Adventurers 2", "value": 129109 },
+    { "source": "Young families", "target": "University graduates 2", "value": 211092 },
+
+    { "source": "Middle aged", "target": "Young families 2", "value": 331654 },
+    { "source": "Middle aged", "target": "Retired couples 2", "value": 199318 },
+    { "source": "Middle aged", "target": "Adventurers 2", "value": 312231 },
+    { "source": "Middle aged", "target": "University graduates 2", "value": 98019 },
+
+    { "source": "Retired couples", "target": "Young families 2", "value": 198120 },
+    { "source": "Retired couples", "target": "Middle aged 2", "value": 199318 },
+    { "source": "Retired couples", "target": "Adventurers 2", "value": 91029 },
+    { "source": "Retired couples", "target": "University graduates 2", "value": 64010 },
+
+    { "source": "Adventurers", "target": "Young families 2", "value": 129109 },
+    { "source": "Adventurers", "target": "Middle aged 2", "value": 312231 },
+    { "source": "Adventurers", "target": "Retired couples 2", "value": 91029 },
+    { "source": "Adventurers", "target": "University graduates 2", "value": 78301 },
+
+    { "source": "University graduates", "target": "Young families 2", "value": 211092 },
+    { "source": "University graduates", "target": "Middle aged 2", "value": 98019 },
+    { "source": "University graduates", "target": "Retired couples 2", "value": 64010 },
+    { "source": "University graduates", "target": "Adventurers 2", "value": 78301 }
+  ]
+}

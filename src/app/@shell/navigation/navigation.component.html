@@ -1,0 +1,6 @@
+<div class="navigation">
+  <a class="navigation__single" [routerLink]="item.destination" routerLinkActive="navigation__single--active" [routerLinkActiveOptions]="{ exact: true}"
+     *ngFor="let item of navigationItems">
+    <img class="navigation__single__icon" src="../../../assets/nav-icons/{{item.icon}}" [alt]="item.label" />
+  </a>
+</div>

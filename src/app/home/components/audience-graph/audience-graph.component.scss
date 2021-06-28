@@ -1,0 +1,9 @@
+@import "../../../../styles/variables";
+
+.audienceChart {
+  position: relative;
+
+  &__chart {
+    height: 600px;
+  }
+}

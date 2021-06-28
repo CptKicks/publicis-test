@@ -1,0 +1,30 @@
+$primary: #18181A;
+$primary-2: #C39D02;
+$primary-3: #2E353F;
+$secondary: #26282F;
+$white-70: rgba(255, 255, 255, 0.7);
+$white: #FFF;
+
+$theme-colors: (
+  "primary":    $primary,
+  "primary-2":  $primary-2,
+  "primary-3":  $primary-3,
+  "secondary":  $secondary,
+  "white-70": $white-70,
+);
+
+// Grid breakpoints
+$grid-gutter-width: 1.5rem;
+$grid-breakpoints: (
+  xs: 0,
+  xl: 1400px,
+  xxl: 1800px,
+);
+
+// Typography
+$font-family-base: Poppins, sans-serif;
+$line-height-base: 1.5;
+$headings-font-weight: 700;
+
+// Negative Margins
+$enable-negative-margins: true;

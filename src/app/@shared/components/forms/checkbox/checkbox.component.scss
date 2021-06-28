@@ -1,0 +1,40 @@
+@import "../../../../../styles/variables";
+$checkbox-size: 1.25rem;
+
+.checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &__wrapper {
+    color: $primary-2;
+    position: relative;
+    display: block;
+    width: $checkbox-size;
+    height: $checkbox-size;
+  }
+
+  &__mark {
+    color: $primary-2;
+    display: none;
+    fill: currentColor;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+  }
+
+  &__input {
+    appearance: none;
+    width: $checkbox-size;
+    height: $checkbox-size;
+    border: 3px solid currentColor;
+    border-radius: 5px;
+
+    &:checked + .checkbox__mark {
+      display: block;
+    }
+  }
+}

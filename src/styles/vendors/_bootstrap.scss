@@ -1,0 +1,31 @@
+$include-column-box-sizing: true !default;
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+@import "~bootstrap/scss/vendor/rfs";
+
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+
+@import "~bootstrap/scss/utilities";
+
+$utilities: map-merge(
+    $utilities,
+    (
+      "rounded": (
+        property: border-radius,
+        class: rounded,
+        values: (
+          0: 0,
+          1: 1rem,
+          circle: 50%,
+          pill: $border-radius-pill
+        )
+      ),
+    )
+);
+
+@import "~bootstrap/scss/utilities/api";

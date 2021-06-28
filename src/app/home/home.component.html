@@ -1,0 +1,92 @@
+<div class="container-fluid">
+  <div class="row justify-content-end mt-n3">
+    <div class="col-3">
+      <div class="text-end me-2">
+        <div class="downloadChart" (click)="downloadChart()">
+          <div class="downloadChart__container">
+            Download chart
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row overlappedSubtitle" *ngIf="audienceSubtitle">
+    <div class="col-12">
+      <div class="text-white text-center py-3">
+        <h6 class="mb-0">Overlap of Facebook mapped attributes between {{ audienceSubtitle }}</h6>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-2 pe-0 bg-primary-3 position-relative d-flex" style="z-index: 3;">
+      <div>
+        <div class="absolute-center">
+          <div class="totalAudience">
+            <div class="totalAudience__container">
+              <div class="totalAudience__number">{{ totalAudience | numberSuffix }}</div>
+              <div class="totalAudience__subtitle">Total Audience</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ps-0 overflow-hidden"
+         [ngClass]="{ 'col-4 col-xxl-5': expandOverlapSection, 'col-6 col-xxl-6': !expandOverlapSection }">
+      <app-audience-graph></app-audience-graph>
+    </div>
+
+    <div class="d-flex align-items-center"
+         [ngClass]="{ 'col-4 col-xxl-4 justify-content-center': !expandOverlapSection, 'col-6 col-xxl-5 justify-content-end': expandOverlapSection }">
+      <div class="audienceOverlapSection" [ngClass]="{ 'audienceOverlapSection--expanded': expandOverlapSection }">
+        <div [formGroup]="audienceOverlapFormGroup" class="audienceOverlapSection__checkboxes">
+          <p class="audienceOverlapSection__single-checkbox text-white-70">Select audiences to view overlap</p>
+          <div class="audienceOverlapSection__single-checkbox" *ngFor="let name of data.audiences" [ngClass]="{ 'audienceOverlapSection__single-checkbox--selected': audienceOverlapFormGroup.get(name)?.value && expandOverlapSection}">
+            <div class="audienceOverlapCheckbox">
+              <app-checkbox [formControlName]="name" [color]="data.audienceData[name].color">
+                <div class="audienceOverlapCheckbox__label">
+                  <div>
+                    <div class="audienceOverlapCheckbox__title">{{ name }}</div>
+                    <div class="audienceOverlapCheckbox__subtitle">Total audience size: <span class="audienceOverlapCheckbox__title">{{ data.audienceData[name].value | numberSuffix:2 }}</span>
+                    </div>
+                  </div>
+                </div>
+              </app-checkbox>
+            </div>
+          </div>
+        </div>
+
+        <div class="audienceOverlapSection__box">
+          <div class="audienceOverlapSection__box__title">
+            Audience Overlap
+          </div>
+
+          <div class="audienceOverlapSection__stats">
+            <div class="audienceOverlapSection__stat">
+              99.9%
+            </div>
+            <div class="audienceOverlapSection__stat">
+              145.2k
+            </div>
+          </div>
+
+          <div class="audienceOverlapSection__attributes">
+            <div class="audienceOverlapSection__attributes__title">
+              Overlapped attributes:
+            </div>
+
+            <div class="audienceOverlapSection__attributes__text">
+              Classical musical, Married, 40-45, Higher education,
+              Tech buff, Middle aged, Example attribute, Attribute, More attributes, Attribute
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
